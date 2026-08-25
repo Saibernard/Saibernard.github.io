@@ -63,6 +63,59 @@
           <!-- ====== AI PROJECTS SECTION ====== -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+            <!-- Jarvis-Style AR Workbench -->
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div style="display:flex;align-items:center;justify-content:center;">
+                  <video controls muted playsinline preload="metadata" style="width:100%;max-width:220px;">
+                    <source src="images/ar_workbench_visionpro.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle;text-align:justify">
+                <span class="papertitle">Jarvis-Style Augmented Reality Workbench - Hands-On CAD Disassembly with an In-Scene LLM</span>
+                <br>
+                <strong>Builder</strong>
+                <br>
+                <em>2026</em>
+                <p></p>
+                <p style="text-align:justify;">
+                  An <strong>augmented reality workbench</strong> for Apple Vision Pro that ingests any <strong>CAD assembly (STEP)</strong> and reconstructs it as a fully interactive AR object that can be disassembled by hand - demonstrated on an open-source legged robot. An <strong>LLM embedded in the AR scene</strong> is grounded in the assembly's own data: tapping any part returns its name, true dimensions, instance count, and functional role in the machine, with the model reasoning about both the physical component and its purpose in the assembly.
+                </p>
+                <p style="text-align:justify;">
+                  The <strong>CAD-to-headset pipeline</strong> preserves every part's identity, hierarchy, and true dimensions from the STEP source through to the live AR scene, and <strong>bare-hand tracking</strong> supports reliable part-level manipulation. The workbench serves as the foundation for the physical digital-twin simulation below: components can be swapped in AR to evaluate how the machine behaves before it is ever built.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Humanoid Digital Twin -->
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div style="display:flex;align-items:center;justify-content:center;">
+                  <video controls muted playsinline preload="metadata" style="width:100%;max-width:220px;">
+                    <source src="images/humanoid_digital_twin.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle;text-align:justify">
+                <span class="papertitle">Real-Time Humanoid Digital Twin - 43-DOF Physics Simulation in Augmented Reality</span>
+                <br>
+                <strong>Builder</strong>
+                <br>
+                <em>2026</em>
+                <p></p>
+                <p style="text-align:justify;">
+                  A physical digital-twin simulation embedded in the same <strong>augmented reality workbench</strong>, with a full physics backend driving an interactive AR scene. The backend runs <strong>floating-base rigid-body dynamics</strong> for a <strong>43-DOF humanoid</strong> constructed from <strong>Unitree's official G1 model</strong> - its published link masses, inertia tensors, joint limits, and actuator effort limits - with <strong>forward dynamics and contact resolved at 500 Hz</strong>, rendered live in AR.
+                </p>
+                <p style="text-align:justify;">
+                  Reference trajectories are tracked through <strong>position-controlled actuators</strong>: a 1.6 stride/s run gait with ground reaction forces cycling through each stance phase as the contact solver resolves every footstrike, and a 0.5 Hz lift cycle that takes the elbow and shoulder actuators through full flexion, loading the arm chain. A live telemetry panel in the AR scene reports <strong>ground reaction forces normalized to bodyweight, per-actuator saturation against real effort limits, peak joint velocities, base tilt, specific power in W/kg</strong>, and the sim's realtime factor.
+                </p>
+                <p style="text-align:justify;">
+                  The robot can be dissected mid-simulation directly in AR: component specs can be swapped or deleted - for example, detuned actuators dropped onto the legs - and the same reference gait degrades immediately, with saturation pinned and tracking error visible in the pose. Each live spec change functions as a <strong>component-level sensitivity study</strong>, with the system-level consequence reflected immediately in both behavior and telemetry.
+                </p>
+              </td>
+            </tr>
+
             <!-- AI Testing Agent -->
             <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
