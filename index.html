@@ -29,7 +29,7 @@
                   My path has been anything but conventional. Racing and engineering Formula 3 and Formula 2 cars on India's fastest tracks. A gold-medal B.E. from Anna University, then an M.S.E. in Robotics & AI at the <strong>University of Pennsylvania</strong>, with entrepreneurship coursework at <strong>Wharton</strong> and a research assistantship in the <strong>GRASP Lab</strong> under Dr. Vijay Kumar, building aerial robot platforms. Mobile robots at <strong>Amazon Robotics</strong>. Now AI tools at ASML. One idea drives all of it: take hard engineering problems and solve them with software that people actually use.
                 </p>
                 <p style="text-align:center">
-                  <a href="mailto:saibernard97@gmail.com">Email</a> &nbsp;/&nbsp;
+                  <a href="mailto:saibernard97@gmail.com">saibernard97@gmail.com</a> &nbsp;/&nbsp;
                   <a href="https://github.com/Saibernard">Github</a>&nbsp;/&nbsp;
                   <a href="https://www.linkedin.com/in/saibernard-yogendran-200883124/">LinkedIn</a>
                 </p>
@@ -46,6 +46,7 @@
                 <div style="display:flex; align-items:center; flex-wrap:nowrap; gap:20px;">
                   <img src="images/companies.png" alt="Companies I worked" style="width:500px; height:200px;"> 
                   <img src="images/amazon-robotics-logo-feature.jpg" alt="Amazon Robotics" style="width:200px; height:100px;">
+                  <img src="images/stanford-logo.svg" alt="Stanford University" style="height:100px;">
                   <img src="images/asml-logo.png" alt="ASML" style="width:200px; height:100px;">
                 </div>
               </td>
@@ -112,6 +113,40 @@
                 </p>
                 <p style="text-align:justify;">
                   The robot can be dissected mid-simulation directly in AR: component specs can be swapped or deleted - for example, detuned actuators dropped onto the legs - and the same reference gait degrades immediately, with saturation pinned and tracking error visible in the pose. Each live spec change functions as a <strong>component-level sensitivity study</strong>, with the system-level consequence reflected immediately in both behavior and telemetry.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Physical AI Teleoperation -->
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div style="display:flex;align-items:center;justify-content:center;">
+                  <video controls muted playsinline preload="metadata" style="width:100%;max-width:220px;">
+                    <source src="images/physical_ai_teleop.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle;text-align:justify">
+                <span class="papertitle">Learning Dexterous Humanoid Manipulation with NVIDIA GR00T through a Unified Teleoperation Pipeline</span>
+                <br>
+                <strong>Builder</strong>
+                <br>
+                <em>2026</em>
+                <p></p>
+                <p style="text-align:justify;">
+                  A <strong>physical AI</strong> pipeline in which human demonstrations become robot training data: teleoperated demonstrations of a <strong>Unitree G1 humanoid with three-finger Dex3 dexterous hands</strong> are recorded as training episodes for fine-tuning <strong>NVIDIA GR00T</strong>, so that the resulting policy can be deployed back onto the same robot and a natural-language instruction such as "put the rod in the bin" is enough for autonomous execution. Data collection, training, and deployment all share a single setup.
+                </p>
+                <p style="text-align:justify;">
+                  The G1 is controlled in real time by the operator's own hands - shown here picking up a rod and placing it in a bin. The headset reconstructs the full skeleton of both hands from its cameras and streams the poses to a bridge running a <strong>MuJoCo physics simulation</strong> of the G1, which solves both arms in real time with a <strong>head-relative, mirrored mapping</strong>: the robot's hands are where the operator's are, oriented as theirs are, with fingers closing as theirs close. Unlike first-person setups, the operator sees the whole body while teaching - which matters for a humanoid whose arms, torso, and hands move at once. Tracking is millimetre-accurate through the whole workspace and holds at natural hand speeds.
+                </p>
+                <p style="text-align:justify;">
+                  Underneath runs a real-time <strong>inverse kinematics solver</strong> with joint limits, rate limiting, and self-collision avoidance, and a servo model tuned so the hands hold position under load. The same pipeline drives a <strong>single-arm SO-101 with a gripper</strong> and the <strong>two-armed G1 with dexterous hands</strong>, producing an identical dataset format for both robots.
+                </p>
+                <p style="text-align:justify;">
+                  Every demonstration is recorded as a training episode in the <strong>LeRobot format</strong> - three camera streams including the robot's own head and palm views, the full joint state, object poses, and the task instruction in natural language - laid out in <strong>GR00T's modality configuration</strong>. The bridge implements GR00T's inference protocol, so a fine-tuned checkpoint plugs directly into the same simulation and scene that produced its training data. The next stage is <strong>teaching by intervention</strong>: GR00T drives the robot, the operator reaches in when it goes wrong, and the correction is recorded - <strong>DAgger-style interactive imitation learning</strong> in which every mistake becomes training data.
+                </p>
+                <p style="text-align:justify;">
+                  <em>Stack: VisionOS, RealityKit, Python, MuJoCo, LeRobot, NVIDIA GR00T.</em>
                 </p>
               </td>
             </tr>
@@ -3762,6 +3797,7 @@
                     <td width="75%" valign="center" style="font-size: small;">
                         <h2>LEADERSHIP</h2>
                         <ul>
+                          <li><strong>Section Leader</strong>: Stanford University's Code in Place - taught a weekly section of Stanford's CS106A-based Python course to a cohort of 15 students (2025)</li>
                           <li><strong>Program Management Engineer</strong>: Managed team of 8 members in delivering a 100 tonne dual fuel dump truck (May 2020 - Feb 2022)</li>
                           <li><strong>Chief Technical Officer</strong>: SAE Baja Team “Team Traxion” (Academic year 2017-2018)</li>
                           <li><strong>Chairman</strong>: SAE COLLEGIATE CLUB, SVCE (Academic year 2017-2018)</li>
